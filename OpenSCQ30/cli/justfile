@@ -1,0 +1,28 @@
+build profile='dev':
+    cargo build --profile {{profile}}
+
+test:
+    cargo test --bins
+    cargo test --test '*'
+
+test-cov:
+    cargo llvm-cov --no-report --bins
+    cargo llvm-cov --no-report --test '*'
+
+snapshot-test:
+    -cargo test --test '*'
+    cargo insta review
+
+install path:
+    cargo build --release
+    ./scripts/install.sh "{{path}}"
+
+uninstall path:
+    ./scripts/uninstall.sh "{{path}}"
+
+alias fmt := format
+format:
+    cargo fmt
+
+format-check:
+    cargo fmt --check

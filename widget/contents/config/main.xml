@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+    <kcfgfile name=""/>
+    
+    <group name="General">
+        <entry name="macAddress" type="String">
+            <label>MAC Address delle cuffie</label>
+            <default></default>
+        </entry>
+        
+        <entry name="refreshInterval" type="Int">
+            <label>Intervallo di aggiornamento (secondi)</label>
+            <default>30</default>
+            <min>5</min>
+            <max>300</max>
+        </entry>
+        
+        <entry name="showBatteryBadge" type="Bool">
+            <label>Mostra badge batteria sull'icona</label>
+            <default>true</default>
+        </entry>
+        
+        <entry name="autoConnect" type="Bool">
+            <label>Tenta connessione automatica all'avvio</label>
+            <default>true</default>
+        </entry>
+    </group>
+    
+    <group name="Appearance">
+        <!-- Icone -->
+        <entry name="customIcon" type="String">
+            <label>Icona personalizzata</label>
+            <default>audio-headset</default>
+        </entry>
+        
+        <entry name="iconNormal" type="String">
+            <label>Icona modalità Normal</label>
+            <default>audio-headset</default>
+        </entry>
+        
+        <entry name="iconTransparency" type="String">
+            <label>Icona modalità Transparency</label>
+            <default>audio-input-microphone</default>
+        </entry>
+        
+        <entry name="iconNoiseCanceling" type="String">
+            <label>Icona modalità Noise Canceling</label>
+            <default>audio-volume-muted</default>
+        </entry>
+        
+        <!-- Colori Badge Batteria -->
+        <entry name="batteryColorLow" type="String">
+            <label>Colore batteria bassa</label>
+            <default>#e74c3c</default>
+        </entry>
+        
+        <entry name="batteryColorMedium" type="String">
+            <label>Colore batteria media</label>
+            <default>#f39c12</default>
+        </entry>
+        
+        <entry name="batteryColorHigh" type="String">
+            <label>Colore batteria alta</label>
+            <default>#27ae60</default>
+        </entry>
+        
+        <!-- Font -->
+        <entry name="useSystemFont" type="Bool">
+            <label>Usa font di sistema</label>
+            <default>true</default>
+        </entry>
+        
+        <entry name="customFontFamily" type="String">
+            <label>Font personalizzato</label>
+            <default>Noto Sans</default>
+        </entry>
+        
+        <entry name="fontSize" type="Int">
+            <label>Dimensione font</label>
+            <default>10</default>
+            <min>8</min>
+            <max>18</max>
+        </entry>
+        
+        <entry name="titleFontSize" type="Int">
+            <label>Dimensione font titoli</label>
+            <default>14</default>
+            <min>10</min>
+            <max>24</max>
+        </entry>
+        
+        <!-- Layout -->
+        <entry name="popupWidth" type="Int">
+            <label>Larghezza popup</label>
+            <default>22</default>
+            <min>16</min>
+            <max>40</max>
+        </entry>
+        
+        <entry name="compactBadgeSize" type="Int">
+            <label>Dimensione badge compatto</label>
+            <default>8</default>
+            <min>6</min>
+            <max>14</max>
+        </entry>
+        
+        <!-- Tema -->
+        <entry name="accentColor" type="String">
+            <label>Colore accento</label>
+            <default></default>
+        </entry>
+        
+        <entry name="useCustomAccent" type="Bool">
+            <label>Usa colore accento personalizzato</label>
+            <default>false</default>
+        </entry>
+    </group>
+</kcfg>

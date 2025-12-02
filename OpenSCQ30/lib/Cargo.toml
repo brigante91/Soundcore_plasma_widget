@@ -1,0 +1,73 @@
+[package]
+name = "openscq30-lib"
+version.workspace = true
+license.workspace = true
+edition = "2024"
+
+[lints]
+workspace = true
+
+[features]
+default = []
+bundled-dependencies = ["rusqlite/bundled", "rust-embed/debug-embed"]
+
+[lib]
+crate-type = ["lib"]
+
+[dependencies]
+openscq30-lib-macros = { path = "../lib-macros" }
+openscq30-lib-has = { path = "../lib-has" }
+openscq30-i18n = { path = "../i18n" }
+openscq30-i18n-macros = { path = "../i18n-macros" }
+tokio = { workspace = true, features = ["sync", "time", "rt", "macros"] }
+futures = { workspace = true }
+uuid = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+strum = { workspace = true, features = ["derive"] }
+macaddr = { workspace = true }
+nom = { workspace = true }
+nom-language = { workspace = true }
+serde = { workspace = true, features = ["derive", "rc"] }
+serde_json = { workspace = true }
+async-trait = { workspace = true }
+rusqlite = { workspace = true }
+i18n-embed = { workspace = true, features = [
+    "fluent-system",
+    "desktop-requester",
+] }
+i18n-embed-fl = { workspace = true }
+rust-embed = { workspace = true }
+cfg-if = { workspace = true }
+itertools = { workspace = true }
+indexmap = { workspace = true }
+paste = { workspace = true }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+bluer = { workspace = true, features = ["bluetoothd", "rfcomm"] }
+tokio = { workspace = true, features = ["rt-multi-thread"] }
+
+[target.'cfg(target_os = "windows")'.dependencies]
+rusqlite = { workspace = true, features = ["bundled"] }
+hex = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread"] }
+windows = { workspace = true, features = [
+    "Storage_Streams",
+    "Foundation",
+    "Foundation_Collections",
+    "Devices_Enumeration",
+    "Devices_Bluetooth",
+    "Devices_Bluetooth_GenericAttributeProfile",
+    "Devices_Bluetooth_Rfcomm",
+    "Networking_Sockets",
+    "deprecated",
+] }
+
+[target.'cfg(target_os = "android")'.dependencies]
+rusqlite = { workspace = true, features = ["bundled"] }
+rust-embed = { workspace = true, features = ["debug-embed"] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "test-util"] }
+proptest = { workspace = true, default-features = false, features = ["std"] }
+proptest-derive = { workspace = true }

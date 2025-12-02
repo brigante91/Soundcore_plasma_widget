@@ -1,0 +1,211 @@
+# English translation for Soundcore Plasma Widget
+# Copyright (C) 2024
+# This file is distributed under the same license as the soundcore-widget package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: soundcore-widget 2.0\n"
+"Report-Msgid-Bugs-To: brigante@example.com\n"
+"POT-Creation-Date: 2024-12-02 12:00+0000\n"
+"PO-Revision-Date: 2024-12-02 12:00+0000\n"
+"Last-Translator: Brigante <brigante@example.com>\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# English is the source language, so translations are the same as msgid
+# This file exists for completeness and to allow overrides if needed
+
+# config/config.qml
+msgid "General"
+msgstr "General"
+
+msgid "Appearance"
+msgstr "Appearance"
+
+# config/ConfigGeneral.qml
+msgid "Device"
+msgstr "Device"
+
+msgid "MAC Address:"
+msgstr "MAC Address:"
+
+msgid "Bluetooth MAC address of your Soundcore headphones"
+msgstr "Bluetooth MAC address of your Soundcore headphones"
+
+msgid "Refresh"
+msgstr "Refresh"
+
+msgid "Interval (seconds):"
+msgstr "Interval (seconds):"
+
+msgid "How often to update headphone status (battery, mode, etc.)"
+msgstr "How often to update headphone status (battery, mode, etc.)"
+
+msgid "Display"
+msgstr "Display"
+
+msgid "Battery badge:"
+msgstr "Battery badge:"
+
+msgid "Show battery indicator on icon"
+msgstr "Show battery indicator on icon"
+
+msgid "Behavior"
+msgstr "Behavior"
+
+msgid "Auto-connect:"
+msgstr "Auto-connect:"
+
+msgid "Automatically refresh on startup"
+msgstr "Automatically refresh on startup"
+
+msgid "To find MAC: Bluetooth Settings → Paired Devices"
+msgstr "To find MAC: Bluetooth Settings → Paired Devices"
+
+msgid "Bluetooth device:"
+msgstr "Bluetooth device:"
+
+msgid "-- Select device --"
+msgstr "-- Select device --"
+
+msgid "Refresh device list"
+msgstr "Refresh device list"
+
+msgid "Select your Soundcore headphones from paired Bluetooth devices"
+msgstr "Select your Soundcore headphones from paired Bluetooth devices"
+
+msgid "Or enter manually if device not listed above"
+msgstr "Or enter manually if device not listed above"
+
+# config/ConfigAppearance.qml
+msgid "Icons"
+msgstr "Icons"
+
+msgid "Main icon:"
+msgstr "Main icon:"
+
+msgid "Normal mode:"
+msgstr "Normal mode:"
+
+msgid "Transparency mode:"
+msgstr "Transparency mode:"
+
+msgid "ANC mode:"
+msgstr "ANC mode:"
+
+msgid "Battery Colors"
+msgstr "Battery Colors"
+
+msgid "Low battery (<20%):"
+msgstr "Low battery (<20%):"
+
+msgid "Medium battery (20-50%):"
+msgstr "Medium battery (20-50%):"
+
+msgid "High battery (>50%):"
+msgstr "High battery (>50%):"
+
+msgid "Select low battery color"
+msgstr "Select low battery color"
+
+msgid "Select medium battery color"
+msgstr "Select medium battery color"
+
+msgid "Select high battery color"
+msgstr "Select high battery color"
+
+msgid "Font"
+msgstr "Font"
+
+msgid "System font:"
+msgstr "System font:"
+
+msgid "Use Plasma default font"
+msgstr "Use Plasma default font"
+
+msgid "Custom font:"
+msgstr "Custom font:"
+
+msgid "Examples: Noto Sans, Fira Sans, Inter, JetBrains Mono"
+msgstr "Examples: Noto Sans, Fira Sans, Inter, JetBrains Mono"
+
+msgid "Text size:"
+msgstr "Text size:"
+
+msgid "Title size:"
+msgstr "Title size:"
+
+msgid "Layout"
+msgstr "Layout"
+
+msgid "Popup width:"
+msgstr "Popup width:"
+
+msgid "Badge size:"
+msgstr "Badge size:"
+
+msgid "Theme"
+msgstr "Theme"
+
+msgid "Accent color:"
+msgstr "Accent color:"
+
+msgid "Use custom accent color"
+msgstr "Use custom accent color"
+
+msgid "Select accent color"
+msgstr "Select accent color"
+
+msgid "Preview"
+msgstr "Preview"
+
+# main.qml
+msgid "Disconnected"
+msgstr "Disconnected"
+
+msgid "Connected"
+msgstr "Connected"
+
+msgid "Battery"
+msgstr "Battery"
+
+msgid "(Charging)"
+msgstr "(Charging)"
+
+msgid "Sound Mode"
+msgstr "Sound Mode"
+
+msgid "Normal"
+msgstr "Normal"
+
+msgid "Transparency"
+msgstr "Transparency"
+
+msgid "ANC"
+msgstr "ANC"
+
+msgid "Equalizer"
+msgstr "Equalizer"
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Firmware:"
+msgstr "Firmware:"
+
+msgid "MAC:"
+msgstr "MAC:"
+
+msgid "Headphones not connected"
+msgstr "Headphones not connected"
+
+msgid "Make sure headphones are powered on\nand connected via Bluetooth"
+msgstr "Make sure headphones are powered on\nand connected via Bluetooth"
+
+msgid "Retry"
+msgstr "Retry"
+

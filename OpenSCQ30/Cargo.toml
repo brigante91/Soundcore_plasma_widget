@@ -1,0 +1,73 @@
+[workspace]
+members = [
+    "cli",
+    "lib",
+    "lib-macros",
+    "i18n",
+    "i18n-macros",
+    "lib-has",
+]
+resolver = "2"
+
+[workspace.package]
+version = "2.0.0"
+license = "GPL-3.0-or-later"
+
+[workspace.lints.clippy]
+use_self = "warn"
+derive_partial_eq_without_eq = "warn"
+equatable_if_let = "warn"
+redundant_pub_crate = "warn"
+elidable_lifetime_names = "warn"
+semicolon_if_nothing_returned = "warn"
+cloned_instead_of_copied = "warn"
+filter_map_next = "warn"
+map_unwrap_or = "warn"
+ignored_unit_patterns = "warn"
+
+[profile.release]
+strip = true
+lto = true
+
+[workspace.dependencies]
+clap = "4"
+clap_complete = "4"
+tokio = "1"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+macaddr = "1"
+heck = "0.5"
+itertools = "0.14"
+futures = "0.3"
+strum = "0.27"
+serde = "1"
+anyhow = "1"
+dirs = "6"
+uuid = "1"
+thiserror = "2"
+nom = "8"
+nom-language = "0.1"
+serde_json = "1"
+windows = "0.61"
+tempfile = "3"
+bluer = "0.17"
+hex = "0.4"
+async-trait = "0.1"
+rusqlite = "0.37"
+syn = "2"
+quote = "1"
+proc-macro2 = "1"
+i18n-embed = "0.16"
+i18n-embed-fl = "0.10"
+rust-embed = "8"
+cfg-if = "1"
+tabled = "0.20"
+terminal_size = "0.4"
+toml = "0.8"
+insta = "1"
+insta-cmd = "0.6"
+csv = "1"
+indexmap = "2"
+paste = "1"
+proptest = { version = "1.0.0", default-features = false }
+proptest-derive = "0.6"

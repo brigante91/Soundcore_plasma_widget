@@ -1,0 +1,22 @@
+{
+    "KPlugin": {
+        "Id": "com.github.soundcore.widget",
+        "Name": "Soundcore Control",
+        "Name[it]": "Controllo Soundcore",
+        "Description": "Control panel for Soundcore headphones - Sound modes, Equalizer, Battery",
+        "Description[it]": "Pannello di controllo per cuffie Soundcore - Modalità audio, Equalizzatore, Batteria",
+        "Icon": "audio-headset",
+        "Authors": [
+            {
+                "Name": "Brigante",
+                "Email": "-"
+            }
+        ],
+        "Category": "Multimedia",
+        "Version": "2.0",
+        "License": "GPL-3.0",
+        "Website": "https://github.com/brigante91/Soundcore_plasma_widget?"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

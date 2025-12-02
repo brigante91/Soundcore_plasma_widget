@@ -1,0 +1,94 @@
+mod cli
+mod i18n
+mod i18n-macros
+mod lib
+mod lib-macros
+mod lib-has
+
+set unstable := true
+
+default:
+    @just --choose
+
+# Build CLI in specified profile (dev/release)
+build profile='dev':
+    just cli/ build '{{ profile }}'
+
+# Build release binary with bundled dependencies
+release:
+    cargo build --release --package openscq30-cli --features bundled-dependencies
+
+# Run all tests
+test: lib::test cli::test
+
+# Run tests with coverage
+test-cov: lib::test-cov cli::test-cov
+
+# Clean coverage data
+llvm-cov-clean:
+    cargo llvm-cov clean --workspace
+
+# Generate coverage report
+test-cov-report format='lcov':
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    case '{{format}}' in
+        lcov)
+            format_args="--lcov --output-path lcov.info"
+            ;;
+        html)
+            format_args="--html"
+            ;;
+        *)
+            echo Invalid format
+            exit 1
+            ;;
+    esac
+
+    cargo llvm-cov report $format_args
+
+# Install CLI to specified path
+install path:
+    just cli/ install '{{ path }}'
+
+# Uninstall CLI from specified path
+uninstall path:
+    just cli/ uninstall '{{ path }}'
+
+# Run CLI with arguments (e.g., just run -- paired-devices list)
+run *ARGS:
+    cargo run --package openscq30-cli -- {{ARGS}}
+
+# Run CLI in release mode with arguments
+run-release *ARGS:
+    cargo run --release --package openscq30-cli -- {{ARGS}}
+
+# Format all code
+alias fmt := format
+[parallel]
+format: cli::format i18n::format i18n-macros::format lib::format lib-macros::format lib-has::format
+
+# Check code formatting
+[parallel]
+format-check: cli::format-check i18n::format-check i18n-macros::format-check lib::format-check lib-macros::format-check lib-has::format-check
+
+# Run clippy lints
+lint:
+    cargo clippy --workspace --all-targets
+
+# Check for unused dependencies (requires cargo-udeps)
+check-deps:
+    cargo +nightly udeps --workspace
+
+# Clean build artifacts
+clean:
+    cargo clean
+
+# Show help for CLI
+help:
+    cargo run --package openscq30-cli -- --help
+
+# Generate shell completions
+completions shell='bash':
+    cargo run --package openscq30-cli -- completions --shell {{shell}}
